@@ -34,7 +34,7 @@ int main(int argc,char *argv[])
             printf("%d is odd \n",num);        
         else
             printf("%d is even \n",num);
-            return 1;
+            //return 1;
     }
 
     return 0;    
