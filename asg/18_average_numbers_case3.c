@@ -11,6 +11,7 @@ logic:-
  */
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 double average(int element[],int *tot_int);
 
@@ -42,19 +43,22 @@ int main(int argc,char *argv[],char **envp)
         case 3:{                
                 //char * getenv (const char *name)
                 char *elements = getenv("arr");
-                printf("Hi Karuna!!\n",typeof(elements));
+                printf("arr is:%s\n",(elements!=NULL)? elements : "getenv returned NULL");
+                printf("Length of arr:%lu\n",strlen(elements));
+                total_int = strlen(elements); 
+                if(elements != NULL){
+                   printf("String to int:%d\n",atoi(elements)); 
+                }
+                else{
+                    //avg = average(elements,&total_int);
+                }
 
-                // printf("array\n");
-                // while(*elements != '\0'){
-                //     printf("array is = %s\n",(elements));
-                //  }
+                //printf("Average is: %f\n",avg);
                 break;
-        }
+            }
         default:
                 printf("Invalid input!!\n");
                 return 1;
-
-
     }
     return 0;    
 }
