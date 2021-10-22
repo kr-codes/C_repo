@@ -1,6 +1,5 @@
 /*
-Name: Karuna R
-Date: 
+Name: Karuna R 
 Description: To check  
 Input: 
 Output: 
